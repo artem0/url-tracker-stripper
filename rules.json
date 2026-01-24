@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "utm_source",
+              "utm_medium",
+              "utm_campaign",
+              "utm_term",
+              "utm_content",
+              "utm_id",
+              "utm_cid",
+              "fbclid",
+              "gclid",
+              "gclsrc",
+              "dclid",
+              "msclkid",
+              "mc_cid",
+              "mc_eid",
+              "ref",
+              "ref_",
+              "rlz",
+              "oq",
+              "gs_lcrp",
+              "gs_l",
+              "gs_lp",
+              "gs_pcrt",
+              "psi",
+              "xssi",
+              "sourceid",
+              "source",
+              "ie",
+              "aqs",
+              "client",
+              "sclient",
+              "ved",
+              "ei",
+              "uact",
+              "sa",
+              "sca_esv",
+              "sxsrf",
+              "biw",
+              "bih",
+              "dpr",
+              "prmd",
+              "spell",
+              "sei",
+              "zx",
+              "fbs",
+              "aic",
+              "cshid",
+              "num",
+              "sstk",
+              "pq"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "resourceTypes": ["main_frame", "xmlhttprequest"],
+      "requestDomains": ["google.com"]
+    }
+  }
+]

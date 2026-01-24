@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "URL Tracker Stripper",
+  "icons": {
+    "48": "logo/icon48.png",
+    "128": "logo/icon128.png"
+  },
+  "version": "1.0",
+  "description": "Automatically removes tracking parameters from URLs for cleaner, more private browsing",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
