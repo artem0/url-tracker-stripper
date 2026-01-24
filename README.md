@@ -96,6 +96,22 @@ This extension uses Chrome's Declarative Net Request API (Manifest V3) instead o
 
 Old Manifest V2 extensions ran JavaScript on every request, adding latency and CPU overhead. Declarative rules have near-zero performance impact.
 
+## Testing
+
+Tests use Puppeteer to launch a real Chrome instance with the extension loaded.
+
+```bash
+./test/run.sh
+```
+
+Tests verify:
+- Tracking params are stripped (ved, ei, sa, sxsrf, etc.)
+- Functional params are preserved (q, tbm, tbs, start, hl, gl, safe)
+- Image, news, video, shopping searches work correctly
+- Pagination works
+
+Note: Google may trigger captcha for automated requests. These tests are skipped automatically.
+
 ## License
 
 MIT

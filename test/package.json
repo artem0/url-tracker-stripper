@@ -1,0 +1,11 @@
+{
+  "name": "url-tracker-stripper-tests",
+  "version": "1.0.0",
+  "description": "Tests for URL Tracker Stripper Chrome extension",
+  "scripts": {
+    "test": "node extension.test.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
