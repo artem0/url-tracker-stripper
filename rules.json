@@ -63,8 +63,41 @@
       }
     },
     "condition": {
-      "resourceTypes": ["main_frame", "xmlhttprequest"],
-      "requestDomains": ["google.com"]
+      "resourceTypes": [
+        "main_frame",
+        "xmlhttprequest"
+      ],
+      "requestDomains": [
+        "google.com"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "removeParams": [
+              "t",
+              "ia",
+              "atb",
+              "origin"
+            ]
+          }
+        }
+      }
+    },
+    "condition": {
+      "resourceTypes": [
+        "main_frame",
+        "xmlhttprequest"
+      ],
+      "requestDomains": [
+        "duckduckgo.com"
+      ]
     }
   }
 ]

@@ -4,6 +4,17 @@ const path = require('path');
 const EXTENSION_PATH = path.resolve(__dirname, '..');
 
 const TEST_CASES = [
+  // DuckDuckGo
+  {
+    name: 'duckduckgo - strips origin, ia, t, keeps q',
+    input: 'https://duckduckgo.com/?ia=web&origin=funnel_home_google&t=h_&q=messi',
+    expected: 'https://duckduckgo.com/?q=messi'
+  },
+  {
+    name: 'duckduckgo - strips t and ia, keeps q',
+    input: 'https://duckduckgo.com/?q=messi&t=brave&ia=web',
+    expected: 'https://duckduckgo.com/?q=messi'
+  },
   // Image search
   {
     name: 'image search - preserves tbm=isch',
@@ -76,7 +87,7 @@ async function runTests() {
         timeout: 15000
       });
 
-      await new Promise(r => setTimeout(r, 500));
+      await new Promise(r => setTimeout(r, 3000));
 
       const finalUrl = page.url();
 

@@ -22,5 +22,17 @@
         "path": "rules.json"
       }
     ]
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://duckduckgo.com/*"
+      ],
+      "js": [
+        "ddg-clean.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
 }
